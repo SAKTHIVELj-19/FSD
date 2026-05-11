@@ -1,0 +1,12 @@
+ID,Ass. ID,Requirements Description,"Business Need, Justification",Project Objective,Requested By,Department,WBS Element,Specification,Design,Test Cases
+1,1.1,Manager Registration,Need administrators to manage and assign tasks,Create Task Management System,Stakeholder,Management,1.1,Finished,Finished,1001
+1,1.2,Manager Login,Secure access for managers to protect data,Create Task Management System,Security Officer,Management,1.2,Finished,Finished,1002
+2,2.1,Member Registration,Allow team members to join the system,Create Task Management System,HR,Operations,2.1,Finished,Finished,2001
+2,2.2,Member Login,Secure access for members to see work,Create Task Management System,Security Officer,Operations,2.2,Finished,Finished,2002
+3,3.1,Create Task,Core business requirement to define work,Create Task Management System,Project Manager,Management,3.1,Finished,Finished,3001
+3,3.2,Assign Task,Distribute workload effectively to members,Create Task Management System,Project Manager,Management,3.2,Finished,Finished,3002
+4,4.1,View All Tasks,Oversight of all operations and progress,Create Task Management System,Project Manager,Management,4.1,Finished,Finished,4001
+4,4.2,View Assigned Tasks,Members need to see their specific work,Create Task Management System,Team Lead,Operations,4.2,Finished,Finished,4002
+5,5.1,Update Task Status,Track progress of tasks through lifecycle,Create Task Management System,Team Lead,Operations,5.1,Finished,Finished,5001
+6,6.1,Deadline Validation,Prevent invalid deadlines (before start),Create Task Management System,Quality Assurance,QA,6.1,Finished,Finished,6001
+7,7.1,Role-based Access Control,Enforce security boundaries between roles,Create Task Management System,Security Officer,IT,7.1,Finished,Finished,7001
