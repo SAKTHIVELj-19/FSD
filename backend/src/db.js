@@ -3,12 +3,26 @@ import { open } from "sqlite";
 import path from "path";
 import { fileURLToPath } from "url";
 import dotenv from "dotenv";
+import fs from "fs";
 
 dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const dbFile = process.env.DB_FILE || path.join(__dirname, "../data/fsd18.db");
+let dbFile = process.env.DB_FILE || path.join(__dirname, "../data/fsd18.db");
+
+if (process.env.VERCEL) {
+  const tmpDbPath = "/tmp/fsd18.db";
+  if (!fs.existsSync(tmpDbPath)) {
+    try {
+      fs.copyFileSync(dbFile, tmpDbPath);
+      console.log("Copied SQLite DB to /tmp for Vercel");
+    } catch (err) {
+      console.error("Failed to copy DB to /tmp", err);
+    }
+  }
+  dbFile = tmpDbPath;
+}
 
 export async function openDb() {
   const db = await open({
